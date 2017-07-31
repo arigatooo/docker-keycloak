@@ -1,0 +1,11 @@
+embed-server
+# Extensions first
+batch
+
+module add --name=io.evt.keycloak.provider.events.blockchain-integration --resources=/root/keycloak/keycloak-events.jar --dependencies=org.keycloak.keycloak-core,org.keycloak.keycloak-server-spi,org.keycloak.keycloak-server-spi-private
+/subsystem=keycloak-server:list-add(name=providers, value="module:io.evt.keycloak.provider.events.blockchain-integration")
+
+run-batch
+# Just for the heck of it
+reload
+stop-embedded-server
