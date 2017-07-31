@@ -8,5 +8,6 @@ To build the docker image:
     
 To run: 
 
-    docker run --name keycloak-evt evt:keycloak
+    docker run -p 8080:8080 --name keycloak-evt evt:keycloak 
+    docker run -p 8080:8080 --name keycloak-evt evt:keycloak --debug
     
